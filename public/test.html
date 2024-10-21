@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hii Shiv</h1>
+
+    <script>
+      var obj = {
+        name: "shiv",
+        city: "pune",
+      };
+
+      function getMultiply() {
+        let sum = 1;
+        for (let i = 0; i < this.length; i++) {
+          sum = sum * this[i];
+        }
+        return sum;
+      }
+      //  console.log('obj', obj)
+      //console.log('obj', obj.name)
+
+      obj.name = "Aashu";
+      //  console.log('obj', obj.name)
+      // console.log('obj', obj)
+      Array.prototype.getMultiply = getMultiply;
+      Array.prototype.sum = function () {
+        let sum = 0;
+        let ar = this;
+        console.log("this is ", this);
+        for (let i = 0; i < ar.length; i++) {
+          sum = ar[i] + sum;
+        }
+        return sum;
+      };
+
+      let ar = [20, 301];
+      let b = [2, 5, 6, 7];
+      // ar.prototype=test
+
+      console.log("sum is ", ar.sum(), b.getMultiply());
+
+      let x = [1, 4, 5];
+      let y = [2, 3, 4, 5, 6];
+
+      x.odd = function () {
+        for (let i = 0; i < this.length; i++) {
+          if (this[i] % 2 == 0) {
+            return this[i];
+          }
+        }
+      };
+
+      y.prototype = x.prototype;
+
+      console.log("XX is ", x.odd());
+      console.log("YY is ", y.odd());
+
+      const ar1 = [
+                        {
+                        name: "shiv",
+                        x: [null],
+                        parameterizations: [
+                            {
+                            name: { x: "shiv" },
+                            position: "test",
+                            calibartuions: [
+                                {
+                                axes: {
+                                    EINHEIT_W: ["trttt"],
+                                    LANGNAME: ["Parameter FW_a"],
+                                    WERT: [0],
+                                },
+                                meta: {
+                                    responsible: "shiv@gmail.com",
+                                    kind: "FESTWERT",
+                                    shape: "Scalar",
+                                },
+                                },
+                            ],
+                            },
+                        ],
+                        },
+                        {
+                        name: "shiv",
+                        x: [null],
+                        parameterizations: [
+                            {
+                            name: { x: "shiv" },
+                            position: "test",
+                            calibartuions: [
+                                {
+                                axes: {
+                                    EINHEIT_W: ["trttt"],
+                                    LANGNAME: ["Parameter FW_a"],
+                                    WERT: [0],
+                                },
+                                meta: {
+                                    responsible: "shiv@gmail.com",
+                                    kind: "FESTWERT",
+                                    shape: "Scalar",
+                                },
+                                },
+                            ],
+                            },
+                        ],
+                        },
+      ];
+    </script>
+  </body>
+</html>

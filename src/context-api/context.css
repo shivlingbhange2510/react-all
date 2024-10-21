@@ -1,0 +1,17 @@
+
+.dark{
+    background-color: aqua;
+}
+
+button{
+    height: 30px;
+    width: 100px;
+    /* background-color: green; */
+    border: 1px solid transparent;
+    color: white;
+    border-radius: 5px;
+}
+.light{
+    background-color: lightblue;
+    
+}
